@@ -1,0 +1,47 @@
+Libraries:
+  - name: abathur
+    paths:
+    - "src/**/*.vhd"
+    - "src/**/*.vhdl"
+  - name: abathur_sim
+    paths:
+    - "sim/src/**/*.vhd"
+    - "sim/src/**/*.vhdl"
+    
+
+TypeCheck: True
+
+Lint:
+    Threshold: Warning
+    DeclaredNotAssigned: 
+      enabled: True
+      severity: Warning #Default severity Warning
+
+    DeclaredNotRead:        True #Default severity Warning
+    ReadNotAssigned:        True #Default severity Critical
+    SensitivityListCheck:   True #Default severity Warning
+    LatchCheck:             True #Default severity Critical
+    PortNotRead:            True #Default severity Warning
+    PortNotWritten:         True #Default severity Critical
+    NoPrimaryUnit:          True #Default severity Warning
+    DuplicateLibraryImport: True #Default severity Warning
+    DuplicatePackageUsage:  True #Default severity Warning
+    DeprecatedPackages:     True #Default severity Warning
+    DisconnectedPorts:      True #Default severity Critical
+
+
+Tags:
+    Entity:                 True
+    Architeture:            True
+    Process:                True
+    ProcessVariable:        True
+    Instantiation:          True
+    Signal:                 True
+    Package:                True
+    Function:               True
+    Procedure:              True
+    Component:              True
+    Constant:               True
+    Type:                   True
+    Subtype:                True
+    PackageBody:            True
